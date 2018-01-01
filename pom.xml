@@ -15,6 +15,7 @@
       <commons-collections.version>3.2.1</commons-collections.version>
       <cglib.version>3.2.4</cglib.version>
       <aspectjweaver.version>1.8.9</aspectjweaver.version>
+      <fastjson.version>1.2.40</fastjson.version>
   </properties>
 
 
@@ -91,6 +92,19 @@
           <artifactId>junit</artifactId>
           <version>RELEASE</version>
       </dependency>
+
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>fastjson</artifactId>
+          <version>${fastjson.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjrt</artifactId>
+          <version>1.8.13</version>
+      </dependency>
+
   </dependencies>
   <build>
     <finalName>com.leetutu.spring</finalName>

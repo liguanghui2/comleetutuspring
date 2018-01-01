@@ -1,6 +1,9 @@
 package com.leetutu.test;
 
+import com.leetutu.dao.StudentDao;
 import com.leetutu.dao.UserDao;
+import com.leetutu.vo.Student;
+import com.leetutu.vo.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +17,22 @@ public class UserDaoAspectJTest {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private StudentDao studentDao;
+
     @Test
     public void aspectJTest(){
-        userDao.addUser();
+        User user=new User();
+        user.setId(19L);
+        user.setName("test");
+        userDao.addUser(user);
+        userDao.deleteUser();
+        userDao.findUserTest(1234L);
+    }
+
+    @Test
+    public void studentDaoTest(){
+        Student stu=studentDao.getStudentById(123L);
+        System.out.println("————————————————————"+stu.toString());
     }
 }
