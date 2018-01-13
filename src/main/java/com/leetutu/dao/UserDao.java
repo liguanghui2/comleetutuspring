@@ -30,6 +30,6 @@ public interface UserDao {
     /*
     根据用户ID查询用户
      */
-    public User findUserTest(Long id);
+    public User findUserById(Long id);
 
 }

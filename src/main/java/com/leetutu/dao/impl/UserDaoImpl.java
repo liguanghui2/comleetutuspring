@@ -30,8 +30,8 @@ public class UserDaoImpl implements UserDao {
     }
 
     @SystemLogAnnotation(description = "删除用户")
-    public User findUserTest(Long id) {
-        System.out.println("进入。。。。。findUserTest");
+    public User findUserById(Long id) {
+           System.out.println("进入。。。。。findUserTest");
            User user=new User();
            user.setId(1234L);
            user.setName("小明");
