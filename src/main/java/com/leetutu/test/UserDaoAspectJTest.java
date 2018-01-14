@@ -27,7 +27,7 @@ public class UserDaoAspectJTest {
         user.setName("test");
         userDao.addUser(user);
         userDao.deleteUser();
-        userDao.findUserTest(1234L);
+        userDao.findUserById(1234L);
     }
 
     @Test
